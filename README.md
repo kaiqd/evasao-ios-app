@@ -11,19 +11,21 @@ O foco é demonstrar o funcionamento básico: o usuário informa alguns dados do
 
 🚀 Como rodar o projeto
 
-1. Pré-requisitos
-	•	Xcode 15+
-	•	iOS 17+ (simulador ou dispositivo físico)
-	•	Backend rodando localmente ou hospedado (veja evasao-ml-api)
+### Pré-requisitos
+- Xcode 15+
+- iOS 17+ (simulador ou dispositivo físico)
+- Backend rodando localmente ou hospedado → [evasao-ml-api](https://github.com/kaiqd/evasao-ml-api)
 
 2. Configuração
 
 No arquivo APIClient dentro do projeto, ajuste a variável baseURL para apontar para o servidor Python:
 
+```swift
 struct APIClient {
     static var baseURL = "http://127.0.0.1:8000" // simulador
     // ou "http://SEU-IP-LOCAL:8000" para rodar em dispositivo físico
 }
+```
 
 3. Executar
 
@@ -33,13 +35,17 @@ O app enviará os dados para a API e exibirá a probabilidade de risco.
 
 ⸻
 
-📡 Exemplo de fluxo
-	1.	Usuário informa:
-	•	Faltas: 25
-	•	Nota Média: 60.5
-	•	Horas de Trabalho: 20
-	•	Idade: 22
-	2.	O app envia para o endpoint /predict da API.
-	3.	O backend retorna um JSON com a probabilidade de evasão.
-	4.	O resultado é exibido no app em texto e cor (verde/vermelho).
+## 📡 Exemplo de fluxo
+
+1. Usuário informa:
+   - Faltas: `25`
+   - Nota Média: `60.5`
+   - Horas de Trabalho: `20`
+   - Idade: `22`
+
+2. O app envia para o endpoint `/predict` da API.
+
+3. O backend retorna um JSON com a probabilidade de evasão.
+
+4. O resultado é exibido no app em **texto e cor (verde/vermelho)**.
 
