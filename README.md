@@ -39,7 +39,7 @@ O app enviará os dados para a API e exibirá a probabilidade de risco.
 
 1. Usuário informa:
    - Faltas: `25`
-   - Nota Média: `60.5`
+   - Nota Média: `6.5`
    - Horas de Trabalho: `20`
    - Idade: `22`
 
